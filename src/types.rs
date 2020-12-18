@@ -14,3 +14,16 @@ pub struct Issue {
     url: String,
     title: String,
 }
+
+#[derive(Serialize)]
+pub struct Message {
+    msg: String,
+}
+
+impl Message {
+    pub fn new(msg: &str) -> Message {
+        Message {
+            msg: msg.into(),
+        }
+    }
+}

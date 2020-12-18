@@ -1,11 +1,12 @@
-use rocket::{get, post};
+use rocket::get;
 use rocket_contrib::json::Json;
 
 use crate::types::Project;
+use crate::types::Message;
 
 #[get("/")]
-pub fn root() -> String {
-    "It works!".to_string()
+pub fn root() -> Json<Message> {
+    Json(Message::new("All izz well"))
 }
 
 #[get("/projects")]
