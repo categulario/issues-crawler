@@ -13,6 +13,7 @@ pub struct Issue {
     author: String,
     url: String,
     title: String,
+    content: String,
 }
 
 #[derive(Serialize)]
